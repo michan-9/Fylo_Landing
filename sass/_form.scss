@@ -1,0 +1,101 @@
+.form {
+  position: absolute;
+  width: 65%;
+  padding: 5rem 7rem;
+  border-radius: 12px;
+  background-color: var(--dark-blue-1);
+  margin: 0 auto;
+  top: -17rem;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+
+  @include responsive(tab-port) {
+    width: 90%;
+    top: -25%;
+  }
+
+  @include responsive(phone) {
+    top: -30%;
+    padding: 2rem 3rem;
+  }
+
+  .paragraph {
+    width: 80%;
+    margin: 2rem auto;
+
+    @include responsive(tab-port) {
+      width: 100%;
+    }
+  }
+
+  .heading-2,
+  .paragraph {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    border-radius: 100px;
+    padding: 1.5rem 2rem;
+    flex: 1;
+    border: none;
+    transition: all 0.2s;
+
+    @include responsive(tab-land) {
+      flex: 0 0 60%;
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgb(228, 228, 228);
+    }
+  }
+
+  &__custom {
+    position: absolute;
+    color: var(--red);
+    top: 115%;
+    left: 2%;
+    opacity: 0;
+    visibility: hidden;
+
+    @include responsive(tab-port) {
+      top: 38%;
+      left: 6%;
+    }
+
+    @include responsive(phone) {
+      font-size: 1rem;
+    }
+  }
+
+  &__input:invalid + &__custom {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__button {
+    margin-left: 2.5rem;
+    border: none;
+    padding: 1.5rem 5rem;
+    font-size: 1.5rem;
+
+    @include responsive(tab-land) {
+      padding: 1.5rem;
+      flex: 0 0 35%;
+    }
+
+    @include responsive(tab-port) {
+      margin-left: 0;
+      margin-top: 3.5rem;
+    }
+  }
+}

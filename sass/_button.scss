@@ -1,0 +1,39 @@
+.btn {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.8rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &--solid {
+    padding: 1.5rem 8rem;
+    border-radius: 100px;
+    color: var(--white);
+    background-image: linear-gradient(to right, var(--cyan), var(--blue));
+    display: inline-block;
+    transition: all 0.2s;
+
+    @include responsive(phone) {
+      padding: 1.5rem 6rem;
+    }
+
+    &:hover {
+      background-image: linear-gradient(var(--cyan), var(--cyan));
+    }
+  }
+
+  &--wide {
+    color: var(--cyan);
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cyan);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--white);
+      border-bottom: 1px solid var(--white);
+    }
+  }
+}

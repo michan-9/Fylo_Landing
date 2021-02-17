@@ -1,0 +1,55 @@
+.details {
+  padding: var(--basic-padding);
+  display: flex;
+  align-items: center;
+
+  @include responsive(tab-port) {
+    flex-direction: column;
+  }
+
+  &__img-box {
+    margin-right: 5rem;
+    flex: 0 0 55%;
+
+    @include responsive(tab-port) {
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__wrapper {
+    .heading-2 {
+      width: 55%;
+
+      @include responsive(tab-land) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .paragraph {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 95%;
+    }
+  }
+
+  &__button-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--cyan);
+
+    :first-child {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

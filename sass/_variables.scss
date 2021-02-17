@@ -1,0 +1,29 @@
+/* CSS VARIABLES */
+
+:root {
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Raleway", sans-serif;
+
+  --dark-blue-1: hsl(217, 28%, 15%);
+  --dark-blue-2: hsl(218, 28%, 13%);
+  --dark-blue-3: hsl(216, 53%, 9%);
+  --dark-blue-4: hsl(219, 30%, 18%);
+
+  --cyan: rgb(101, 226, 217);
+  --blue: hsl(198, 60%, 50%);
+  --red: hsl(0, 100%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --shadow: 0 2px 10px hsla(300, 43%, 22%, 0.8);
+
+  --basic-padding: 8rem;
+
+  @include responsive(tab-land) {
+    --basic-padding: 6rem;
+  }
+
+  @include responsive(phone) {
+    --basic-padding: 2rem;
+  }
+}
